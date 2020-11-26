@@ -36,7 +36,8 @@ db.linkedon.aggregate([
     {$group:
     {_id: "$currentCompany.name",
     averageSalary:{$avg:{$sum:"$salary"}}}}
-])*/
+])
+
 db.linkedon.aggregate([
 {$match: {$and:[{$or:
      [
@@ -51,3 +52,10 @@ db.linkedon.aggregate([
     average:{$avg:{$sum:"$salary"}}}},
     {$sort:{average:-1}}
 ])
+*/
+
+
+
+
+
+
